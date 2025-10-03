@@ -116,8 +116,13 @@ def preprocess_for_model(df):
     df['HoursOfSnow_rolling'] = df['HoursOfSnow'].rolling(window=24, min_periods=1).sum()
 
     def degrees_to_cardinal(d):
-        dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
-        return dirs[int(round(d / (360. / len(dirs)))) % len(dirs)]
+        if pd.isna(d) or d is None:
+            return 'N'  # Default to North if no wind direction data
+        try:
+            dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
+            return dirs[int(round(d / (360. / len(dirs)))) % len(dirs)]
+        except (TypeError, ValueError):
+            return 'N'  # Default to North if there's any error in conversion
     df['WinDir'] = df['WinDir'].apply(degrees_to_cardinal)
 
     wind_direction_mapping = {
