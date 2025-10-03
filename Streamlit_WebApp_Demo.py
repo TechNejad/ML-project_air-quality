@@ -76,7 +76,7 @@ def fetch_weather_forecast(city):
         return None
     
     try:
-        url = "https://api.open-meteo.com/v1/cma"
+        url = "https://api.open-meteo.com/v1/forecast"
         params = {
             "latitude": lat,
             "longitude": lon,
