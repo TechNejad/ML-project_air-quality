@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beijing Air Quality Forecast: A Machine Learning Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <!-- Project title -->
+      <h1 class="hero-title">Beijing&nbsp;Air&nbsp;Quality&nbsp;Forecast: A Machine&nbsp;Learning&nbsp;Project</h1>
+      <!-- Authors -->
+      <p class="authors">
+        <!-- Deniz has no public website link available; thus we only list the name -->
+        Deniz&nbsp;Yener and <a href="https://mohsen-hassan-nejad.netlify.app/" target="_blank" rel="noopener">Mohsen&nbsp;Hassan&nbsp;Nejad</a>
+      </p>
+      <!-- Affiliation / Course information -->
+      <p class="affiliation">Developed for Fundamentals&nbsp;of&nbsp;ML and Applied&nbsp;Programming&nbsp;for&nbsp;Data&nbsp;Science courses (May&nbsp;2025) in the Artificial Intelligence for Sustainable Societies master’s program</p>
+      <!-- Action buttons -->
+      <div class="buttons">
+        <a href="AirQuality_Paper.pdf" class="btn" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/TechNejad/ML-project_air-quality" class="btn" target="_blank" rel="noopener">Code</a>
+        <a href="https://ml-projectbeijing-air-quality-gqgd3juiatrt7eop7cdrwb.streamlit.app/" class="btn" target="_blank" rel="noopener">Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Abstract section -->
+    <section id="abstract" class="section">
+      <div class="container">
+        <h2>Abstract</h2>
+        <p>
+          <strong>Beijing Air Quality Forecast</strong> is a course project that analyzes Beijing’s air quality from 2010–2014. The goal is to
+          predict hourly PM&nbsp;2.5 concentrations and explore how they relate to seasonal and meteorological factors. Using the CRISP–DM
+          methodology, we cleaned and pre‑processed the data, performed exploratory analysis, engineered lagged and rolling features,
+          and trained several regression models. The best‑performing model powers a live web app that lets anyone forecast
+          upcoming air quality and visualize pollution trends in real time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key features section -->
+    <section id="features" class="section alt">
+      <div class="container">
+        <h2>Key Features</h2>
+        <ul>
+          <li><strong>Comprehensive Data Pipeline.</strong> Handles missing values and outliers, uncovers temporal and meteorological patterns,
+          and creates lagged, rolling window and volatility features to enrich the dataset.</li>
+          <li><strong>Robust Forecasting Models.</strong> Trains and compares Random&nbsp;Forest, XGBoost, SVR and KNN regression models. Hyperparameter
+          tuning via GridSearchCV and time series splitting ensures accurate PM&nbsp;2.5 predictions.</li>
+          <li><strong>Interactive Web Application.</strong> A Streamlit app powered by the best‑performing model provides real‑time air quality
+          forecasts with an intuitive interface, allowing users to see whether outdoor air is safe.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
